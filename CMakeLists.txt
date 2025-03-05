@@ -15,6 +15,8 @@ set(SOURCES
         tests/tests_BigDecimal.cpp
 )
 
+add_library(BigDecimal STATIC src/BigDecimal.cpp src/operations.cpp)
+
 add_executable(BigDecimalTests ${SOURCES})
 
 target_link_libraries(BigDecimalTests gtest gtest_main pthread)
